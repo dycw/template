@@ -1,3 +1,3 @@
-# `template-generic`
+# `template`
 
 Template for generic repositories

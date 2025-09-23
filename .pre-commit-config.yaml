@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/dycw/pre-commit-hooks
-    rev: 0.12.4
+    rev: 0.13.7
     hooks:
       - id: run-bump-my-version
         args: [--mode=bumpversion]

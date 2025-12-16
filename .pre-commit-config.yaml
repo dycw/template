@@ -1,20 +1,6 @@
 repos:
   - hooks:
       - args:
-          - --fix
-        id: ruff-check
-      - id: ruff-format
-    repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.9
-  - hooks:
-      - args:
-          - --script=script.py
-        files: ^script\.py$
-        id: uv-lock
-    repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.9.17
-  - hooks:
-      - args:
           - --option
           - indent_tables=true
           - --option
@@ -33,7 +19,6 @@ repos:
       - args:
           - --github--push--tag
           - --pre-commit--prettier
-          - --pre-commit--ruff
           - --pre-commit--taplo
         id: nitpick
     repo: https://github.com/dycw/pre-commit-hook-nitpick

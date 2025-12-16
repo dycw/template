@@ -25,20 +25,16 @@ repos:
     repo: https://github.com/compwa/taplo-pre-commit
     rev: v0.9.3
   - hooks:
+      - id: format-requirements
+      - id: replace-sequence-str
+    repo: https://github.com/dycw/pre-commit-hooks
+    rev: 0.13.26
+  - hooks:
       - args:
           - --github--push-tag
           - --pre-commit--prettier
           - --pre-commit--ruff
           - --pre-commit--taplo
-          - --pre-commit--uv
-          - --pre-commit--uv--script=script.py
-          - --pyproject
-          - --pyproject--project--name=template
-          - --pyright
-          - --pyright-include=script.py
-          - --pytest
-          - --pytest-test-paths=tests
-          - --ruff
         id: nitpick
     repo: https://github.com/dycw/pre-commit-hook-nitpick
     rev: 0.2.5

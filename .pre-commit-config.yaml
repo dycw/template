@@ -1,20 +1,6 @@
 repos:
   - hooks:
       - args:
-          - --fix
-        id: ruff-check
-      - id: ruff-format
-    repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.9
-  - hooks:
-      - args:
-          - --script=script.py
-        files: ^script\.py$
-        id: uv-lock
-    repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.9.17
-  - hooks:
-      - args:
           - --option
           - indent_tables=true
           - --option
@@ -25,19 +11,13 @@ repos:
     repo: https://github.com/compwa/taplo-pre-commit
     rev: v0.9.3
   - hooks:
-      - id: format-requirements
-      - id: replace-sequence-str
-    repo: https://github.com/dycw/pre-commit-hooks
-    rev: 0.13.26
-  - hooks:
       - args:
-          - --github--push-tag
+          - --github--push--tag
           - --pre-commit--prettier
-          - --pre-commit--ruff
           - --pre-commit--taplo
         id: nitpick
     repo: https://github.com/dycw/pre-commit-hook-nitpick
-    rev: 0.2.5
+    rev: 0.3.4
   - hooks:
       - id: check-executables-have-shebangs
       - id: check-merge-conflict

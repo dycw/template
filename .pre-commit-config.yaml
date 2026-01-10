@@ -7,6 +7,7 @@ repos:
           - --ci--pull-request--pre-commit
           - --ci--push--tag
           - --description=Template for generic repositories
+          - --gitignore
           - --pre-commit--prettier
           - --pre-commit--taplo
           - --readme
